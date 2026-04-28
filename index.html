@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Web Development Portfolio</title>
+    <!-- simulate different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        /* general styles for the entire page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(180deg, #e0f2fe, #bae6fd);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #7dd3fc;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        main {
+            flex: 1;
+            padding: 50px 20px;
+        }
+
+        .assignments {
+            display: grid;
+            gap: 25px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .assignment {
+            background-color: white;
+            border-radius: 16px;
+            padding: 25px 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            /* hover effects */
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .assignment:hover {
+            transform: translateY(-6px); /* move vertically up */
+            box-shadow: 0 16px 30px rgba(0,0,0,0.15);
+        }
+
+        .icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        .assignment p {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .assignment-link p {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .assignment-link:visited p {
+            color: blue;
+        }
+
+        footer {
+            background-color: #7dd3fc;
+            text-align: center;
+            padding: 18px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 24px;
+                padding: 30px 15px;
+            }
+        }
+ 
+        /* 10 icons in one row */
+        @media (min-width: 961px) {
+            .assignments {
+                grid-template-columns: repeat(10, 1fr);
+            }
+        }
+
+        /* 2 rows of 5 */
+        @media (min-width: 481px) and (max-width: 960px) {
+            .assignments {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        /* 10 rows of 1 */
+        @media (max-width: 480px) {
+            .assignments {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        Web Development Portfolio
+    </header>
+
+    <main>
+        <section class="assignments">
+            <a href="index.html" target="_blank" class="assignment-link">
+                <div class="assignment">
+                    <div class="icon">📄</div>
+                    <p>Assignment #01</p>
+                </div>
+            </a>
+
+            <a href="assignment02/index.html" target="_blank" class="assignment-link">
+                <div class="assignment">
+                    <div class="icon">💻</div>
+                    <p>Assignment #02</p>
+                </div>
+            </a>
+
+            <a href="assignment03/index.html" target="_blank" class="assignment-link">
+                <div class="assignment">
+                    <div class="icon">🌟</div>
+                    <p>Assignment #03</p>
+                </div>     
+            </a>
+
+            <a href="assignment04/index.html" target="_blank" class="assignment-link">
+                <div class="assignment">
+                    <div class="icon">🧩</div>
+                    <p>Assignment #04</p>
+                </div>     
+            </a>
+
+             <a href="assignment05/index.html" target="_blank" class="assignment-link">
+                <div class="assignment">
+                    <div class="icon">⚙️</div>
+                    <p>Assignment #05</p>
+                </div>
+            </a>
+
+            <div class="assignment">
+                <div class="icon">📱</div>
+                <p>Assignment #06</p>
+            </div>
+
+            <div class="assignment">
+                <div class="icon">👨‍💻</div>
+                <p>Assignment #07</p>
+            </div>
+
+            <div class="assignment">
+                <div class="icon">🗂️</div>
+                <p>Assignment #08</p>
+            </div>
+
+            <div class="assignment">
+                <div class="icon">🎮</div>
+                <p>Assignment #09</p>
+            </div>
+            
+            <div class="assignment">
+                <div class="icon">🌐</div>
+                <p>Assignment #10</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © Elizabeth Tang
+    </footer>
+</body>
+</html>
